@@ -410,7 +410,6 @@ const storeData = async () => {
 };
 
   const clearInputs = () => {
-    alert("Ticket Submitted")
     setCustomerName("")
     setPhone("")
     setNumPeople(1)
@@ -421,6 +420,8 @@ const storeData = async () => {
     setDiscount(0)
     setDiscountType('%')
     setSocksSizes({ XS:0, S: 0, M: 0, L: 0, XL :0 });
+    alert("Ticket Submitted")
+
   }
 
   const printBill = () => {
