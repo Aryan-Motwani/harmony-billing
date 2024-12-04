@@ -409,7 +409,7 @@ const storeData = async () => {
 };
 
   const clearInputs = () => {
-    alert("clear inputs")
+    alert("Ticket Submitted")
   }
 
   const printBill = () => {
