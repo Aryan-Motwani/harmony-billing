@@ -411,6 +411,16 @@ const storeData = async () => {
 
   const clearInputs = () => {
     alert("Ticket Submitted")
+    setCustomerName("")
+    setPhone("")
+    setNumPeople(1)
+    setNeedsSocks(false)
+    setSelectedDuration('30 min')
+    setPaymentMethod('cash')
+    setMixPayment([{ method: 'cash', amount: '' }, { method: 'cash', amount: '' }]);
+    setDiscount(0)
+    setDiscountType('%')
+    setSocksSizes({ XS:0, S: 0, M: 0, L: 0, XL :0 });
   }
 
   const printBill = () => {
