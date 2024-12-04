@@ -125,6 +125,7 @@ export default function Form() {
   };
 
   const validateSocks = () => {
+    return true;
     if(!needsSocks) return true
     const totalSocks = Object.values(socksSizes).reduce((a, b) => a + b, 0);
     if (totalSocks != numPeople) {
