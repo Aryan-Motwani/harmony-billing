@@ -814,12 +814,14 @@ const storeData = async () => {
             >
               Submit
             </button>
+            {/* 
             <button
               type="submit"
               className="bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700"
             >
               Generate Bill
             </button>
+            */}
           </div>
 
           {/* Confirmation Modal */}
