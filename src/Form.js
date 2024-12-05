@@ -237,59 +237,87 @@ export default function Form() {
     
 
     const billDetails = (
-      <div className='billDetails' style={{ textAlign: 'center' }}>
-        <h2>Trampoline Park</h2>
-        <p>Health & Harmony<br />Cidco, Aurangabad<br />Phone: +91 7888106698</p>
-        <p>-------------------------------------</p>
-        <table style={{ width: '100%', borderCollapse: 'collapse', opacity: 0.9 }}>
+      <div
+        className="billDetails"
+        style={{
+          textAlign: "center",
+          // fontSize: "22px",
+          // fontWeight: "bold",
+          width: "100%",
+          maxWidth: "80mm",
+        }}
+      >
+        <h2 style={{ fontSize: "28px", margin: "5px 0" }}>Trampoline Park</h2>
+        <p style={{ margin: "5px 0" }}>
+          Health & Harmony<br />
+          Cidco, Aurangabad<br />
+          Phone: +91 7888106698
+        </p>
+        <p style={{ margin: "10px 0", borderTop: "1px dashed #000", borderBottom: "1px dashed #000", padding: "5px 0" }}>
+          Receipt
+        </p>
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+            fontSize: "18px", // Slightly smaller font for table content
+            opacity: 0.9,
+          }}
+        >
           <thead>
             <tr>
-              <th style={tableHeaderStyle}>No.</th>
-              <th style={tableHeaderStyle}>Item</th>
-              <th style={tableHeaderStyle}>Qty</th>
-              <th style={tableHeaderStyle}>Price</th>
+              <th style={{ textAlign: "left", padding: "5px" }}>No.</th>
+              <th style={{ textAlign: "left", padding: "5px" }}>Item</th>
+              <th style={{ textAlign: "center", padding: "5px" }}>Qty</th>
+              <th style={{ textAlign: "right", padding: "5px" }}>Price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style={tableCellStyle}>1</td>
-              <td style={tableCellStyle}>Entry</td>
-              <td style={tableCellStyle}>{numPeople}</td>
-              <td style={tableCellStyle}>{packagePrice * numPeople} Rs</td>
+              <td style={{ padding: "5px" }}>1</td>
+              <td style={{ padding: "5px" }}>Entry</td>
+              <td style={{ textAlign: "center", padding: "5px" }}>{numPeople}</td>
+              <td style={{ textAlign: "right", padding: "5px" }}>{packagePrice * numPeople} Rs</td>
             </tr>
             {needsSocks && (
               <tr>
-                <td style={tableCellStyle}></td>
-                <td style={tableCellStyle}>Socks</td>
-                <td style={tableCellStyle}>{numPeople}</td>
-                <td style={tableCellStyle}>{socksTotal} Rs</td>
+                <td style={{ padding: "5px" }}></td>
+                <td style={{ padding: "5px" }}>Socks</td>
+                <td style={{ textAlign: "center", padding: "5px" }}>{numPeople}</td>
+                <td style={{ textAlign: "right", padding: "5px" }}>{socksTotal} Rs</td>
               </tr>
             )}
             <tr>
-              <td style={tableCellStyle} colSpan="3">Subtotal</td>
-              <td style={tableCellStyle}>{packagePrice * numPeople + socksTotal} Rs</td>
+              <td style={{ padding: "5px" }} colSpan="3">Subtotal</td>
+              <td style={{ textAlign: "right", padding: "5px" }}>{packagePrice * numPeople + socksTotal} Rs</td>
             </tr>
             <tr>
-              <td style={tableCellStyle} colSpan="3">Discount</td>
-              <td style={tableCellStyle}>- {discountAmount} Rs</td>
+              <td style={{ padding: "5px" }} colSpan="3">Discount</td>
+              <td style={{ textAlign: "right", padding: "5px" }}>- {discountAmount} Rs</td>
             </tr>
             <tr>
-              <td style={tableCellStyle} colSpan="3"><strong>Total after Discount</strong></td>
-              <td style={tableCellStyle}><strong>{total} Rs</strong></td>
+              <td style={{ padding: "5px" }} colSpan="3">
+                <strong>Total after Discount</strong>
+              </td>
+              <td style={{ textAlign: "right", padding: "5px" }}>
+                <strong>{total} Rs</strong>
+              </td>
             </tr>
           </tbody>
         </table>
-        <p>-------------------------------------</p>
-        <p>Payment Method: {paymentMethod}</p>
-        {paymentMethod === 'mix' && (
-          <div>
+        <p style={{ margin: "10px 0", borderTop: "1px dashed #000", borderBottom: "1px dashed #000", padding: "3px 0" }}>
+          Payment Method: {paymentMethod}
+        </p>
+        {paymentMethod === "mix" && (
+          <div style={{ fontSize: "18px", textAlign: "left", marginTop: "10px" }}>
             {mixPayment.map((payment, index) => (
-              <p key={index} style={{ margin: 0 }}>
+              <p key={index} style={{ margin: "5px 0" }}>
                 Payment {index + 1}: {payment.method} - {payment.amount} Rs
               </p>
             ))}
           </div>
         )}
+        <p style={{ margin: "10px 0", fontSize: "18px" }}>Thank you for visiting!</p>
       </div>
     );
     
@@ -298,6 +326,10 @@ export default function Form() {
       
       printBill()
     }, 500);
+    setTimeout(() => {
+      
+      setBill('')
+    }, 3000);
 };
 
 const tableHeaderStyle = {
@@ -898,7 +930,6 @@ const storeData = async () => {
               className='billRef'
               ref={billRef} // Use ref here
               style={{
-                marginTop: '20px',
                 padding: '10px',
                 border: '1px solid #ccc',
                 borderRadius: '4px',
@@ -907,7 +938,7 @@ const storeData = async () => {
                 overflow: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center',
+                // alignItems: 'center',
                 justifyContent: 'center',
                 textAlign: 'center'
               }}>
