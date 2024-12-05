@@ -407,6 +407,7 @@ const storeData = async () => {
   await supabase.from("Tickets").insert({name : customerName, data : ticketData})
 
   clearInputs()
+  
 };
 
   const clearInputs = () => {
@@ -420,6 +421,7 @@ const storeData = async () => {
     setDiscount(0)
     setDiscountType('%')
     setSocksSizes({ XS:0, S: 0, M: 0, L: 0, XL :0 });
+    setBill('');
     alert("Ticket Submitted")
 
   }
@@ -465,7 +467,7 @@ const storeData = async () => {
     }
     setTimeout(() => {
       // document.querySelector('.print-btn').style.display = ''
-      document.querySelector('.billDetails').style.display = 'none'
+      // document.querySelector('.billDetails').style.display = 'none'
       // document.querySelector('.billRef').style.opacity = '0'
     }, 3000);
     
@@ -815,13 +817,13 @@ const storeData = async () => {
               Submit
             </button>
             {/* 
+            */}
             <button
               type="submit"
               className="bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700"
             >
               Generate Bill
             </button>
-            */}
           </div>
 
           {/* Confirmation Modal */}
