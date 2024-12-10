@@ -14,10 +14,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/form" element={<Form />} />
-        {/* <Route path="/admin" element={<Admin />} /> */}
+        <Route path="/admin" element={<Admin />} />
         <Route path="/ticket/:id" element={<SignatureCollection />} />
         <Route path="/tickets" element={<TicketsPage />} />
-        {/* <Route path="/records" element={<Records />} />
+        <Route path="/records" element={<Records />}
         <Route path="/reports" element={<Reports />} /> */}
         <Route path="/form2" element={<Form2 />} />
         {/* Optional: Redirect unknown routes to /form */}
