@@ -14,12 +14,13 @@ export default function Navbar() {
         <li>
           <Link to="/form" style={linkStyle}>Form</Link>
         </li>
-        {/* <li>
+        <li>
           <Link to="/admin" style={linkStyle}>Admin</Link>
         </li>
         <li>
           <Link to="/records" style={linkStyle}>Records</Link>
         </li>
+        {/* 
         <li>
           <Link to="/reports" style={linkStyle}>Reports</Link>
         </li> */}
