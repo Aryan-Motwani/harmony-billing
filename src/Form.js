@@ -616,7 +616,7 @@ const storeData = async () => {
       <div className='mx-auto p-6 font-sans'>
       <header className="text-center mb-6">
           <h1 className="text-2xl font-bold text-gray-800">Health and Harmony</h1>
-          <p className="text-gray-600">Trampoline Park Customer Information</p>
+          <p className="text-gray-600">Trampoline Park Customer Information Test</p>
           <h1 className="text-xl font-semibold text-gray-900 mt-4">Grand Total {currTotal}</h1>
         </header>
 
