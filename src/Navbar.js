@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav style={navStyle}>
       <div style={brandingStyle}>
-        <h2>Health and Harmony</h2>
+        <h2>Health and Harmonyy</h2>
       </div>
       <ul style={navLinksStyle}>
         <li>
